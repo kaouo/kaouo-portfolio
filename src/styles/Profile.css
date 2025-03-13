@@ -1,0 +1,156 @@
+/* 프로필 페이지 전체 컨테이너 */
+.profile-container {
+  max-width: 900px; /* 최대 너비 설정 */
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 섹션 타이틀 */
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00a8e8;
+  margin-bottom: 20px;
+}
+
+/* 섹션 번호 스타일 */
+.section-number {
+  color: #00a8e8;
+  font-weight: bold;
+}
+
+/* 섹션 제목 스타일 */
+.section-text {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* 타이틀 옆 구분선 */
+.title-line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 15px;
+  max-width: 250px;
+  width: 100px;
+  display: block;
+}
+
+/* 프로필 내용 전체 레이아웃 */
+.profile-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* 프로필 설명 텍스트 */
+.profile-text {
+  max-width: 60%; /* 이미지 공간 확보 */
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* 프로필 카테고리 제목 */
+.profile-category h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* 프로필 목록 스타일 */
+.profile-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 1.2rem;
+  color: #d1d1d1;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* 프로필 이미지 영역 */
+.profile-image-wrapper {
+  flex-shrink: 0; /* 크기가 줄어들지 않도록 설정 */
+  text-align: center;
+  min-width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 프로필 이미지 */
+.profile-image {
+  max-width: 200px; /* 모바일에서도 적절한 크기 유지 */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  /* 섹션 타이틀 크기 조정 */
+  .section-title {
+    font-size: 1.8rem; /* 모바일에서 크기 조정 */
+  }
+
+  .section-number {
+    font-size: 1.8rem; /* 숫자 크기 조정 */
+  }
+
+  .section-text {
+    font-size: 1.8rem; /* 텍스트 크기 조정 */
+  }
+
+  /* 컨테이너 크기 조정 */
+  .profile-container {
+    max-width: 95%;
+    padding: 60px 20px;
+  }
+
+  /* 프로필 내용 세로 정렬 */
+  .profile-content {
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    justify-content: space-between;
+    gap: 40px; /* 간격 더 넓게 조정 */
+  }
+
+  /* 텍스트 정렬 */
+  .profile-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  /* 타이틀 구분선 크기 조정 */
+  .title-line {
+    width: 20%;
+    min-width: 80px;
+    max-width: 100px;
+    flex-shrik: 0;
+  }
+
+  /* 프로필 목록 크기 조정 */
+  .profile-list li {
+    font-size: 1rem; /* 모바일에서는 더 작게 조정 */
+    line-height: 1.5; /* 줄 간격도 조정 */
+  }
+
+  /* 모바일에서 이미지 크기 조정 */
+  .profile-image {
+    max-width: 180px; /* 너무 작아지지 않도록 크기 조정 */
+  }
+
+  /* 모바일에서 프로필 이미지 숨기기 */
+  .profile-image-wrapper {
+    display: none; /* 모바일에서 사진 숨기기 */
+  }
+}

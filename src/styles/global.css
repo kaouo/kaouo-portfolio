@@ -1,0 +1,19 @@
+/* 모든 요소에 기본 스타일 적용 */
+* {
+  margin: 0; /* 기본 마진 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+  box-sizing: border-box; /* 요소 크기 계산 시 border와 padding 포함 */
+  font-family: "Pretendard", sans-serif; /* 전체 폰트 설정 */
+}
+
+/* 전체 페이지 배경 및 기본 텍스트 색상 설정 */
+body {
+  background-color: #121212; /* 다크 모드 스타일 배경 */
+  color: #ffffff; /* 기본 텍스트 색상 */
+}
+
+/* 링크 기본 스타일 설정 */
+a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 부모 요소의 색상을 따라감 */
+}

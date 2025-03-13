@@ -1,0 +1,106 @@
+/* Intro.css */
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #121212; /* 짙은 블랙 */
+  color: #fff;
+  text-align: center;
+  padding-top: 60px;
+  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.intro-highlight {
+  color: #00a8e8; /* 청록색 강조 */
+}
+
+.intro-subtitle {
+  font-size: 1.3rem;
+  color: #b3b3b3; /* 연한 회색 */
+  margin-bottom: 20px;
+}
+
+.profile-wrapper img {
+  width: 300px;
+}
+
+.scroll-down {
+  font-size: 2rem;
+  color: #b3b3b3;
+  margin-top: 50px;
+  animation: bounce 1.5s infinite;
+}
+
+/* 소셜 아이콘 컨테이너 */
+.social-icons {
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  gap: 20px; /* 아이콘 사이 간격 */
+  margin-top: 20px; /* 프로필 이미지 아래 여백 */
+}
+
+/* 개별 소셜 아이콘 스타일 */
+.social-icon {
+  font-size: 28px; /* 아이콘 크기 */
+  color: #00e0ff; /* SeungY'n 스타일 참고한 네온 컬러 */
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* 호버 효과 */
+.social-icon:hover {
+  transform: scale(1.2); /* 아이콘 크기 확대 */
+  color: #00bfff; /* 호버 시 색상 변경 */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* 태블릿 화면 */
+@media (max-width: 1024px) {
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .profile-wrapper img {
+    width: 200px;
+  }
+}
+
+/* 모바일 화면 */
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 1.5rem; /* 모바일에서 작은 폰트 */
+  }
+
+  .intro-subtitle {
+    font-size: 1rem;
+  }
+
+  .memoji {
+    max-width: 120px; /* 모바일에서 크기 줄이기 */
+  }
+
+  .scroll-arrow {
+    margin-top: 20px; /* 간격 추가 */
+  }
+}

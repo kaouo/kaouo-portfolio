@@ -1,0 +1,117 @@
+/* 프로젝트 섹션 전체 컨테이너 */
+.projects-container {
+  max-width: 900px; /* 최대 너비 설정 */
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* 섹션 제목 스타일 */
+.projects-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* 제목 줄바꿈 방지 */
+  overflow: hidden; /* 넘치는 부분 숨김 */
+}
+
+/* 섹션 번호 스타일 */
+.projects-number {
+  color: #00a8e8;
+  font-weight: bold;
+}
+
+/* 섹션 제목 텍스트 스타일 */
+.projects-text {
+  color: #ffffff; /* Profile은 흰색 */
+}
+
+/* 타이틀 옆 구분선 */
+.title-line {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 15px;
+  width: 250px; /* Profile, About과 동일한 길이 */
+  flex-shrink: 0; /* 구분선이 줄어들지 않도록 설정 */
+}
+
+/* 기존 after 스타일 제거 */
+.projects-title::after {
+  display: none;
+}
+
+/* 리스트 컨테이너 */
+.projects-content {
+  display: flex;
+  flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈 */
+  justify-content: space-between;
+  gap: 20px; /* 프로젝트 항목 간격 */
+}
+
+/* 개별 프로젝트 아이템 스타일 */
+.project-item {
+  background: rgba(255, 255, 255, 0.05); /* 어두운 반투명 배경 */
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(50% - 10px); /* 두 개씩 배치 */
+  transition: transform 0.3s ease-in-out; /* 마우스 오버 시 부드러운 확대 효과 */
+}
+
+/* 프로젝트 아이템 호버 효과 */
+.project-item:hover {
+  transform: scale(1.05); /* 마우스 올릴 때 크기 확대 */
+}
+
+/* 프로젝트 제목 스타일 */
+.project-item h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #00a8e8;
+}
+
+/* 프로젝트 설명 스타일 */
+.project-item p {
+  font-size: 1rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+/* 반응형 스타일 (768px 이하: 모바일) */
+@media (max-width: 768px) {
+  .projects-container {
+    max-width: 95%;
+    padding: 60px 20px;
+  }
+
+  /* 제목 크기 축소 */
+  .projects-title {
+    font-size: 1.8rem;
+  }
+
+  /* 제목 옆 구분선 크기 축소 */
+  .projects-title::after {
+    max-width: 150px;
+  }
+
+  /* 모바일에서는 프로젝트 아이템을 한 줄로 정렬 */
+  .project-item {
+    width: 100%;
+  }
+
+  /* 프로젝트 제목 크기 축소 */
+  .project-item h3 {
+    font-size: 1.2rem;
+  }
+
+  /* 프로젝트 설명 글자 크기 축소 */
+  .project-item p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,142 @@
+/* About 페이지 컨테이너 설정 */
+.about-container {
+  max-width: 900px; /* 전체 너비 제한 */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 80px 20px; /* 상하 여백 조정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Profile과 동일하게 설정 */
+}
+
+/* About 제목 스타일 */
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00a8e8;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* 제목 줄바꿈 방지 */
+  overflow: hidden; /* 넘치는 부분 제거 */
+  gap: 5px;
+}
+
+/* 구분선 스타일 */
+.title-line {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 15px;
+  width: 250px; /* Profile과 동일한 길이 */
+  flex-shrink: 0; /* 구분선이 줄어들지 않도록 설정 */
+}
+
+/* 기존 ::after 제거 */
+.about-title::after {
+  display: none;
+}
+
+/* About 내용 */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px; /* 내용과 이미지 간격 추가 */
+}
+
+/* 번호 색상 설정 */
+.about-number {
+  color: #00a8e8;
+  font-weight: bold;
+}
+
+.about-text {
+  color: #ffffff; /* Profile은 흰색 */
+  white-space: pre-line; /* 줄바꿈 유지 */
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* About 이미지 스타일 */
+.about-image-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.about-image {
+  max-width: 250px;
+  height: auto;
+}
+
+/* 공통 제목 크기 설정 */
+.section-title {
+  font-size: 2rem; /* 모든 페이지의 제목 크기를 동일하게 설정 */
+  font-weight: bold;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 1.8rem;
+    gap: 5px;
+    white-space: nowrap;
+  }
+
+  .title-line {
+    width: 20%;
+    min-width: 80px;
+    max-width: 100px;
+    flex-shrik: 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem; /* 모바일에서 동일한 크기로 줄이기 */
+  }
+
+  .about-container {
+    max-width: 95%; /* Profile과 동일한 값으로 조정 */
+    padding: 60px 20px;
+  }
+
+  .about-content {
+    padding: 0 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-text {
+    flex: 1;
+    min-width: 60%;
+  }
+
+  .about-image-wrapper {
+    flex: 0 0 auto;
+    max-width: 150px;
+    margin-left: 20px;
+  }
+
+  .about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}

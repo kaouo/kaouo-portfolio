@@ -1,0 +1,96 @@
+/* Skills 컨테이너 */
+.skills-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 제목 스타일 */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00a8e8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* 구분선 */
+.title-line {
+  content: "";
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 15px;
+  max-width: 250px;
+  width: 100px;
+  display: block;
+}
+
+/* Skills 내용 */
+.skills-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* 스킬 리스트 */
+.skills-list {
+  flex: 1;
+}
+
+/* 기술 아이템 */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 아이콘 스타일 */
+.skill-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* 기술명 & 설명 */
+.skill-item h4 {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #d1d1d1;
+  margin-top: 5px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column;
+  }
+
+  .skills-sidebar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .skills-list {
+    margin-top: 20px;
+  }
+}

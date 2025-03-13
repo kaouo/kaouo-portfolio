@@ -1,0 +1,97 @@
+/* 내비게이션 바 스타일 */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* 로고와 메뉴를 좌우 배치 */
+  align-items: center;
+  padding: 15px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(18, 18, 18, 0.9); /* 어두운 반투명 배경 */
+  backdrop-filter: blur(10px); /* 배경 블러 효과 */
+  z-index: 1000; /* 다른 요소보다 위에 표시 */
+}
+
+/* 로고 스타일 */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* 내비게이션 메뉴 스타일 */
+.nav-menu {
+  display: flex;
+  gap: 30px; /* 메뉴 간 간격 */
+}
+
+/* 내비게이션 링크 기본 스타일 */
+.nav-menu a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 내비게이션 링크 호버 및 활성화 상태 */
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #00a8e8; /* 강조 색상 */
+}
+
+/* 내비게이션 개별 항목 스타일 */
+.nav-item {
+  color: white; /* 기본 색상 */
+  transition: color 0.3s ease-in-out;
+}
+
+/* 현재 활성화된 메뉴 색상 */
+.nav-item.active {
+  color: #62b6cb;
+}
+
+/* 메인 화면(인트로)에서는 모든 메뉴 색상을 동일하게 유지 */
+.nav-item.default {
+  color: white !important;
+}
+
+/* 태블릿 반응형 (1024px 이하) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 30px; /* 좌우 패딩 감소 */
+  }
+
+  .nav-logo {
+    font-size: 1.3rem; /* 로고 크기 축소 */
+  }
+
+  .nav-menu {
+    gap: 20px; /* 메뉴 간격 축소 */
+  }
+
+  .nav-menu a {
+    font-size: 0.9rem; /* 글자 크기 축소 */
+  }
+}
+
+/* 모바일 반응형 (768px 이하) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    text-align: center;
+    padding: 15px 20px; /* 상하 패딩 유지, 좌우 줄이기 */
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 메뉴 간격 조정 */
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem; /* 모바일에서 크기 줄이기 */
+  }
+}
