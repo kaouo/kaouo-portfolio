@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/Intro.css";
 import profileImage from "../assets/images/memoji.png";
-import { FaGithub, FaBlogger, FaPenNib } from "react-icons/fa";
+import { FaGithub, FaBlogger, FaPen, FaRegStickyNote } from "react-icons/fa";
 
 // GSAP ScrollTrigger 플러그인 등록
 gsap.registerPlugin(ScrollTrigger);
@@ -55,6 +55,7 @@ function Intro() {
 
       {/* 소셜 아이콘 */}
       <div className="social-icons">
+        {/* 깃허브 */}
         <a
           href="https://github.com/kaouo"
           target="_blank"
@@ -62,6 +63,7 @@ function Intro() {
         >
           <FaGithub className="social-icon" />
         </a>
+        {/* 티스토리 */}
         <a
           href="https://kaouo.tistory.com/"
           target="_blank"
@@ -69,12 +71,21 @@ function Intro() {
         >
           <FaBlogger className="social-icon" />
         </a>
+        {/* 벨로그 */}
         <a
           href="https://velog.io/@kaouoi"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaPenNib className="social-icon" />
+          <FaPen className="social-icon" />
+        </a>
+        {/* 노션 */}
+        <a
+          href="https://iridescent-engine-d99.notion.site/1b6adbc00ab280908d64f2e57f8bcb47?pvs=4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaRegStickyNote className="social-icon" /> {/* 노션 아이콘 추가 */}
         </a>
       </div>
 
