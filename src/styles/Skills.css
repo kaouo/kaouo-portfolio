@@ -1,41 +1,55 @@
-/* Skills 컨테이너 */
+/* Skills 섹션 전체 컨테이너 */
 .skills-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 80px 20px;
+  max-width: 900px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 80px 20px; /* 상하 여백 추가 */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start; /* 왼쪽 정렬 */
 }
 
-/* 제목 스타일 */
+/* 섹션 제목 스타일 */
 .section-title {
+  display: flex;
+  align-items: center; /* 수직 정렬 */
   font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  gap: 3px;
+}
+
+/* 02. 번호 텍스트 */
+.section-number {
+  font-family: "LINESeedKR-Bd";
+  font-size: 0.8em;
   font-weight: bold;
   color: #00a8e8;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  margin-right: 5px; /* 숫자와 텍스트 사이 간격 추가 */
+  display: inline-block;
 }
 
-/* 구분선 */
+/* Skills 텍스트 */
+.section-text {
+  font-family: "LINESeedKR-Bd";
+  color: #f5f5f5;
+}
+
+/* 제목 아래 구분선 */
 .title-line {
   content: "";
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-left: 15px;
-  max-width: 250px;
-  width: 100px;
+  width: 250px; /* 구분선 길이 */
   display: block;
 }
 
-/* Skills 내용 */
+/* Skills 내용 전체 스타일 */
 .skills-content {
   display: flex;
   align-items: flex-start;
-  gap: 50px;
+  gap: 50px; /* 좌우 간격 */
 }
 
 /* 스킬 리스트 */
@@ -43,18 +57,19 @@
   flex: 1;
 }
 
-/* 기술 아이템 */
+/* 개별 기술 아이템 스타일 */
 .skill-item {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* 아이콘과 텍스트 간격 */
   background: rgba(255, 255, 255, 0.05);
   padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  border-radius: 10px; /* 모서리 둥글게 */
+  margin-bottom: 15px; /* 리스트 간 간격 */
   transition: background 0.3s ease-in-out;
 }
 
+/* 호버 시 배경색 변경 */
 .skill-item:hover {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -65,19 +80,22 @@
   height: 50px;
 }
 
-/* 기술명 & 설명 */
+/* 기술명 스타일 */
 .skill-item h4 {
+  font-family: "LINESeedKR-Bd";
   font-size: 1.4rem;
   color: white;
 }
 
+/* 기술 설명 스타일 */
 .skill-item p {
+  font-family: "Chosunilbo_myungjo", serif;
   font-size: 1rem;
   color: #d1d1d1;
   margin-top: 5px;
 }
 
-/* 반응형 스타일 */
+/* 모바일 반응형 스타일 */
 @media (max-width: 768px) {
   .skills-content {
     flex-direction: column;

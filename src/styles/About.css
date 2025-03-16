@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Profile과 동일하게 설정 */
+  align-items: flex-start; /* 왼쪽 정렬 */
 }
 
 /* About 제목 스타일 */
@@ -19,7 +19,7 @@
   align-items: center;
   white-space: nowrap; /* 제목 줄바꿈 방지 */
   overflow: hidden; /* 넘치는 부분 제거 */
-  gap: 5px;
+  gap: 3px; /* 숫자와 텍스트 사이 간격 */
 }
 
 /* 구분선 스타일 */
@@ -29,46 +29,54 @@
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-left: 15px;
-  width: 250px; /* Profile과 동일한 길이 */
+  width: 250px;
   flex-shrink: 0; /* 구분선이 줄어들지 않도록 설정 */
 }
 
-/* 기존 ::after 제거 */
-.about-title::after {
-  display: none;
-}
-
-/* About 내용 */
+/* About 내용 컨테이너 */
 .about-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px; /* 내용과 이미지 간격 추가 */
 }
 
-/* 번호 색상 설정 */
-.about-number {
-  color: #00a8e8;
+/* 01. 번호 텍스트 */
+.section-number {
+  font-family: "LINESeedKR-Bd";
+  font-size: 0.8em;
   font-weight: bold;
+  color: #00a8e8;
+  margin-right: 5px; /* 숫자와 텍스트 사이 간격 추가 */
+  display: inline-block;
 }
 
+/* About Me 텍스트 */
+.section-text {
+  font-family: "LINESeedKR-Bd";
+  color: #f5f5f5;
+}
+
+/* About 텍스트 스타일 */
 .about-text {
-  color: #ffffff; /* Profile은 흰색 */
+  color: #ffffff;
   white-space: pre-line; /* 줄바꿈 유지 */
 }
 
 .about-text h3 {
+  font-family: "LINESeedKR-Bd";
   font-size: 1.5rem;
   font-weight: bold;
   color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }
 
+/* About 설명 텍스트 스타일 */
 .about-text p {
+  font-family: "Chosunilbo_myungjo", serif;
   font-size: 1rem;
   color: #d1d1d1;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.8;
+  margin-bottom: 40px;
 }
 
 /* About 이미지 스타일 */
@@ -85,58 +93,37 @@
   height: auto;
 }
 
-/* 공통 제목 크기 설정 */
 .section-title {
-  font-size: 2rem; /* 모든 페이지의 제목 크기를 동일하게 설정 */
-  font-weight: bold;
+  font-family: "LINESeedKR-Bd";
+  font-family: "LINESeedKR-Bd";
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  gap: 5px; /* 숫자와 텍스트 사이 간격 */
+  white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+  flex-wrap: nowrap; /* flex 요소가 여러 줄로 내려가는 걸 방지 */
 }
 
 /* 반응형 스타일 */
 @media (max-width: 768px) {
-  .about-title {
-    font-size: 1.8rem;
-    gap: 5px;
-    white-space: nowrap;
-  }
-
-  .title-line {
-    width: 20%;
-    min-width: 80px;
-    max-width: 100px;
-    flex-shrik: 0;
-  }
-
-  .section-title {
-    font-size: 1.8rem; /* 모바일에서 동일한 크기로 줄이기 */
-  }
-
   .about-container {
-    max-width: 95%; /* Profile과 동일한 값으로 조정 */
+    max-width: 95%;
     padding: 60px 20px;
   }
 
   .about-content {
-    padding: 0 10px;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 
   .about-text {
-    flex: 1;
     min-width: 60%;
   }
 
   .about-image-wrapper {
-    flex: 0 0 auto;
     max-width: 150px;
     margin-left: 20px;
-  }
-
-  .about-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
   }
 }

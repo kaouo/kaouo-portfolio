@@ -1,0 +1,146 @@
+/* 전체 Archiving 섹션을 감싸는 컨테이너 */
+.archiving-container {
+  max-width: 900px; /* 최대 너비 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 80px 20px; /* 위아래 여백 추가 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 섹션 제목 스타일 */
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  gap: 5px;
+}
+
+/* 04. 번호 텍스트 */
+.section-number {
+  font-family: "LINESeedKR-Bd";
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #00a8e8;
+  margin-right: 5px; /* 숫자와 텍스트 사이 간격 추가 */
+  display: inline-block;
+}
+
+/* Archiving 텍스트 */
+.section-text {
+  font-family: "LINESeedKR-Bd";
+  color: #f5f5f5;
+}
+
+/* 구분선 */
+.title-line {
+  width: 250px; /* 선 길이 */
+  height: 2px; /* 선 두께 */
+  background-color: #444; /* 선 색상 */
+  margin-left: 10px; /* 왼쪽 여백 */
+}
+
+/* Archiving 박스들을 감싸는 컨테이너 */
+.archiving-content {
+  display: flex; /* 박스 정렬 */
+  flex-direction: column; /* 세로 배치 */
+  gap: 20px;
+}
+
+/* Archiving 개별 박스 스타일 */
+.archiving-box {
+  background: #222; /* 배경 색상 */
+  padding: 20px; /* 내부 여백 */
+  border-radius: 10px; /* 모서리 둥글게 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 애니메이션 */
+  cursor: pointer; /* 커서 변경 */
+}
+
+/* 마우스를 올렸을 때 박스의 스타일 변화 */
+.archiving-box:hover {
+  background-color: rgba(122, 122, 122, 0.55); /* 배경 색상 */
+  transform: translateY(-5px); /* 마우스 올릴 때 살짝 위로 이동 */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* 그림자 효과 */
+}
+
+/* 박스 안의 제목 텍스트 */
+.archiving-box h3 {
+  font-family: "LINESeedKR-Light", sans-serif;
+  font-size: 1.5rem; /* 제목 크기 */
+  margin-bottom: 7px; /* 제목 아래 여백 */
+}
+
+/* 박스 안의 링크 텍스트 */
+.archiving-box a {
+  font-family: "LINESeedKR-Light", sans-serif;
+  color: #00a8e8; /* 링크 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-weight: bold; /* 굵게 표시 */
+}
+
+.archiving-box p {
+  font-family: "LINESeedKR-Light", sans-serif;
+}
+
+/* Archiving 박스 안의 리스트 스타일 */
+.archiving-box ul {
+  font-size: 1rem;
+  margin-top: 10px; /* 위 여백 */
+  padding-left: 20px; /* 리스트 들여쓰기 */
+}
+
+/* Archiving 박스 안의 리스트 항목 스타일 */
+.archiving-box ul li {
+  font-family: "Chosunilbo_myungjo", serif;
+  line-height: 1.7; /* 줄 간격 */
+  list-style: disc; /* 리스트 스타일 */
+  font-size: 14px;
+}
+
+/* Archiving 박스의 제목과 아이콘을 감싸는 컨테이너 */
+.archiving-title {
+  display: flex; /* 가로 정렬 */
+  align-items: center; /* 수직 정렬 */
+  gap: 10px;
+}
+
+/* Archiving 아이콘 스타일 */
+.archiving-icon {
+  font-size: 30px; /* 아이콘 크기 */
+  color: rgb(255, 255, 255); /* 아이콘 색상 */
+  position: relative; /* 위치 조정 */
+  top: -5px;
+}
+
+/* 반응형 디자인 (768px 이하: 태블릿 및 모바일) */
+@media (max-width: 768px) {
+  .archiving-container {
+    padding: 60px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem; /* 제목 크기 */
+  }
+
+  .title-line {
+    width: 200px; /* 구분선 */
+  }
+
+  .archiving-box {
+    padding: 15px; /* 내부 여백 */
+  }
+
+  .archiving-box h3 {
+    font-size: 1.3rem; /* 제목 크기 */
+  }
+
+  .archiving-box ul li {
+    font-size: 13px; /* 리스트 글자 크기  */
+  }
+
+  .archiving-icon {
+    font-size: 26px; /* 아이콘 크기  */
+    top: -3px; /* 아이콘 위치 */
+  }
+}

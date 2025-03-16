@@ -30,41 +30,50 @@ function NavBar() {
 
   return (
     <nav className="navbar">
-      {/* 네비게이션 로고 */}
-      <div className="nav-logo">YOUNG</div>
+      {/* 내비게이션 로고 */}
+      <div
+        className="nav-logo"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        YOUNG
+      </div>
       <div className="nav-menu">
-        {/* 각 네비게이션 링크에 해당 섹션으로 부드럽게 스크롤 이동 */}
-        <Link
-          to="profile"
-          smooth={true}
-          duration={600}
-          className={activeSection === "profile" ? "active" : ""}
-        >
-          01. Profile
-        </Link>
+        {/* 각 내비게이션 링크에 해당 섹션으로 부드럽게 스크롤 이동 */}
         <Link
           to="about"
           smooth={true}
           duration={600}
+          offset={-80} // 내비게이션 높이만큼 위로 여유를 둠
           className={activeSection === "about" ? "active" : ""}
         >
-          02. About
+          01. About
         </Link>
         <Link
           to="skills"
           smooth={true}
           duration={600}
+          offset={-80} // 내비게이션 높이만큼 위로 여유를 둠
           className={activeSection === "skills" ? "active" : ""}
         >
-          03. Skills
+          02. Skills
         </Link>
         <Link
           to="projects"
           smooth={true}
           duration={600}
+          offset={-80} // 내비게이션 높이만큼 위로 여유를 둠
           className={activeSection === "projects" ? "active" : ""}
         >
-          04. Projects
+          03. Projects
+        </Link>
+        <Link
+          to="archiving"
+          smooth={true}
+          duration={600}
+          offset={-80} // 내비게이션 높이만큼 위로 여유를 둠
+          className={activeSection === "archiving" ? "active" : ""}
+        >
+          04. Archiving
         </Link>
       </div>
     </nav>
