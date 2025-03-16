@@ -60,8 +60,8 @@ function Projects() {
         portfolioImage5,
       ], // 여러 개의 이미지 슬라이드
       features: ["React", "Styled-Components", "GSAP"],
-      siteLink: "#",
-      codeLink: "#",
+      siteLink: "https://kaouo-portfolio.netlify.app",
+      codeLink: "https://github.com/kaouo/kaouo-portfolio",
     },
 
     {
@@ -131,14 +131,14 @@ function Projects() {
             {/* 사이트 및 코드 보기 버튼 */}
             <div className="project-buttons">
               <a
-                href={project.siteLink}
+                href={project.siteLink} // 개별 프로젝트 배포 사이트 링크
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 VIEW SITE
               </a>
               <a
-                href={project.codeLink}
+                href={project.codeLink} // 개별 프로젝트 GitHub 코드 링크
                 target="_blank"
                 rel="noopener noreferrer"
               >
