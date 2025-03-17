@@ -35,7 +35,7 @@ function NavBar() {
         className="nav-logo"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
-        YOUNG
+        LOGING
       </div>
       <div className="nav-menu">
         {/* 각 내비게이션 링크에 해당 섹션으로 부드럽게 스크롤 이동 */}

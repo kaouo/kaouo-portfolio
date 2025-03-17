@@ -68,7 +68,7 @@ function Projects() {
       number: "02",
       title: "🍔 햄부기 테스트",
       description:
-        "햄버거를 테마로 한 성격 유형 테스트 웹 사이트입니다. MBTI 성격 유형을 기반으로 사용자의 선택을 분석하고 맞춤형 결과를 제공합니다. React를 활용하여 컴포넌트 기반으로 설계했으며 직관적인 UI와 귀여운 디자인을 적용하여 누구나 쉽게 참여할 수 있도록 제작했습니다.",
+        "햄버거를 테마로 한 성격 유형 테스트 웹 사이트입니다. MBTI 성격 유형을 기반으로 사용자의 선택을 분석하고 맞춤형 결과를 제공합니다. React를 활용하여 컴포넌트 기반으로 설계했으며 직관적인 UI와 귀여운 디자인을 적용하여 누구나 쉽게 참여할 수 있도록 제작 중에 있으며 3월 말 배포 예정입니다.",
       images: [testImage1, testImage2, testImage3, testImage4, testImage5],
       features: ["React", "GSAP"],
       siteLink: "#",
