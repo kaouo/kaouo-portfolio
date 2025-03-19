@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import "../styles/NavBar.css";
 
 function NavBar() {
   const [activeSection, setActiveSection] = useState("intro");
-  let ticking = false; // ticking 플래그 변수 추가
-
+  const ticking = useRef(false);
   useEffect(() => {
     const handleScroll = () => {
-      if (!ticking) {
-        ticking = true;
+      if (!ticking.current) {
+        ticking.current = true;
 
         requestAnimationFrame(() => {
           const sections = document.querySelectorAll("section");
@@ -35,7 +34,7 @@ function NavBar() {
           }
 
           setActiveSection(currentSection);
-          ticking = false; // 작업 완료 후 ticking 해제
+          ticking.current = false;
         });
       }
     };
