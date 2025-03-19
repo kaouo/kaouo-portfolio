@@ -3,34 +3,51 @@ import { Link } from "react-scroll";
 import "../styles/NavBar.css";
 
 function NavBar() {
-  const [activeSection, setActiveSection] = useState("intro"); // 현재 활성화된 섹션 상태 저장
+  const [activeSection, setActiveSection] = useState("intro");
+  let ticking = false; // ticking 플래그 변수 추가
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll("section"); // 모든 섹션 요소 가져오기
-      let scrollPosition = window.scrollY; // 현재 스크롤 위치 가져오기
-      let currentSection = "intro"; // 기본값 설정
-      sections.forEach((section) => {
-        // 현재 스크롤 위치가 특정 섹션 범위 내에 있는지 확인
-        if (
-          section.offsetTop - 80 <= scrollPosition &&
-          section.offsetTop + section.offsetHeight > scrollPosition
-        ) {
-          currentSection = section.id;
-        } // 해당 섹션의 ID 저장
-      });
-      setActiveSection(currentSection); // 활성화된 섹션 상태 업데이트
+      if (!ticking) {
+        ticking = true;
+
+        requestAnimationFrame(() => {
+          const sections = document.querySelectorAll("section");
+          let scrollPosition = window.scrollY;
+          let currentSection = "intro";
+
+          sections.forEach((section) => {
+            if (
+              section.offsetTop - 80 <= scrollPosition &&
+              section.offsetTop + section.offsetHeight > scrollPosition
+            ) {
+              currentSection = section.id;
+            }
+          });
+
+          // 스크롤이 맨 아래에 도달하면 마지막 섹션 강제 활성화
+          if (
+            window.innerHeight + scrollPosition >=
+            document.body.offsetHeight - 10
+          ) {
+            currentSection =
+              sections[sections.length - 1]?.id || currentSection;
+          }
+
+          setActiveSection(currentSection);
+          ticking = false; // 작업 완료 후 ticking 해제
+        });
+      }
     };
 
-    window.addEventListener("scroll", handleScroll); // 스크롤 이벤트 리스너 등록
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll); // 컴포넌트 언마운트 시 리스너 제거
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <nav className="navbar">
-      {/* 내비게이션 로고 */}
       <div
         className="nav-logo"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -38,12 +55,11 @@ function NavBar() {
         LOGING
       </div>
       <div className="nav-menu">
-        {/* 각 내비게이션 링크에 해당 섹션으로 부드럽게 스크롤 이동 */}
         <Link
           to="about"
           smooth={true}
           duration={600}
-          offset={-80} // 내비게이션 높이만큼 위로 여유를 둠
+          offset={-80}
           className={activeSection === "about" ? "active" : ""}
         >
           01. About
@@ -52,7 +68,7 @@ function NavBar() {
           to="skills"
           smooth={true}
           duration={600}
-          offset={-80} // 내비게이션 높이만큼 위로 여유를 둠
+          offset={-80}
           className={activeSection === "skills" ? "active" : ""}
         >
           02. Skills
@@ -61,7 +77,7 @@ function NavBar() {
           to="projects"
           smooth={true}
           duration={600}
-          offset={-80} // 내비게이션 높이만큼 위로 여유를 둠
+          offset={-80}
           className={activeSection === "projects" ? "active" : ""}
         >
           03. Projects
@@ -70,7 +86,7 @@ function NavBar() {
           to="archiving"
           smooth={true}
           duration={600}
-          offset={-80} // 내비게이션 높이만큼 위로 여유를 둠
+          offset={-80}
           className={activeSection === "archiving" ? "active" : ""}
         >
           04. Archiving
