@@ -1,9 +1,9 @@
 # 👩🏻‍💼 React Portfolio
 
-> **React 기반으로 개발한 개인 포트폴리오**
->
-> 🚀 **배포 주소:** Netlify or Vercel 배포 예정
-> 💻 **기술 스택:** React, Styled-Components, GSAP (ScrollTrigger)
+**React 기반으로 개발한 개인 포트폴리오**
+
+🚀 **배포 주소:** Netlify or Vercel 배포 예정<br>
+💻 **기술 스택:** React, Styled-Components, GSAP (ScrollTrigger)
 
 ---
 
